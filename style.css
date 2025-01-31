@@ -1,0 +1,144 @@
+/* .header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo {
+    width: 140px;
+}
+
+.nav-items > ul {
+    font-size: 20px;
+    display: flex;
+    list-style: none;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.res-card {
+    width: 200px;
+    height: 300px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.search {
+    padding: 10px;
+}
+
+.res-logo {
+    width: 100%;
+    border-radius: 15px;
+
+}   
+
+ .res-card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    border: 1px solid black;
+  }
+
+  h4 {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+  }
+
+  .res-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+   */
+
+
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 70px;
+}
+
+.logo {
+    width: 160px;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-items > ul > li {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Body and container styles */
+.body {
+    padding: 20px;
+}
+
+.search {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.res-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Restaurant card styles */
+.res-card {
+    padding: 16px;
+    background-color: #eff0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.res-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.res-logo {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.res-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin-bottom: 8px;
+}
+
+.res-card h4 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+/* Responsive adjustments */
