@@ -141,4 +141,22 @@
     font-weight: normal;
 }
 
-/* Responsive adjustments */
+
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filter-btn {
+    margin: 0;
+    padding: 10px 20px;  /* Ensure there’s enough clickable area */
+    position: relative;
+    z-index: 1; /* Ensure it's not behind other elements */
+}
+
+
+
+.logo {
+    filter: brightness(0.75) contrast(1.5) saturate(1.6) hue-rotate(-10deg) sepia(0.05);
+  }
+  
