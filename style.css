@@ -160,3 +160,53 @@
     filter: brightness(0.75) contrast(1.5) saturate(1.6) hue-rotate(-10deg) sepia(0.05);
   }
   
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.shimmer-card {
+    margin: 20px;
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0f0;
+
+}
+
+.login {
+    background-color: #a9a9a9; /* Grey background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 12px 24px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+  }
+  
+  .login:hover {
+    background-color: #666666; /* Darker grey on hover */
+  }
+
+  .filter {
+    display: flex;
+  }
+
+  .search{
+    margin: 0;
+    padding: 10px 20px;  /* Ensure there’s enough clickable area */
+    position: relative;
+    z-index: 1; /* Ensure it's not behind other elements */
+
+  }
+
+  .search button {
+    margin-right: 8px;
+  }
+
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
