@@ -1,6 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   // State for all restaurants (original list)
@@ -16,7 +18,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
 
@@ -25,6 +27,13 @@ const Body = () => {
     setAllRestaurants(restaurants); // Store the original data
     setFilteredRestaurants(restaurants); // Use this for filtering
   };
+
+    const onlineStatus = useOnlineStatus();
+   if(onlineStatus===false)
+    return (
+      <h1>Looks like you're offline, check your internet connection!!!</h1>
+  );
+
 
   return allRestaurants.length === 0 ? (
     <Shimmer />
@@ -69,7 +78,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} data={restaurant.info} />
+       <Link  key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id} ><RestaurantCard data={restaurant.info} /></Link>  
         ))}
       </div>
     </div>
